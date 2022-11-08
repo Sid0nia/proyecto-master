@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*estilos generales */
+
+body{
+    background-color: rgb(168, 132, 168);
+    font-family: 'Roboto', sans-serif;
+    background: rgb(109, 230, 159);
+    background: linear-gradient(90deg, rgb(3, 78, 72) 0%, rgb(3, 185, 185) 35%, rgba(0,212,255,1) 100%);
+
+}
+
+/*estilos del contenedor principal */
+
+
+
+/* estilos de header */
+
+header{
+    display: none;
+}
+
+/* estilos de main */
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main h2{
+    color: rgb(3, 75, 51);
+    text-align: center;
+}
+
+main h2 span{
+    display: block;
+}
+
+main p{
+    text-align: center;
+    padding: 1rem;
+}
+
+main .boton{
+    background-color: #166440;
+    color: blanchedalmond;
+    padding: 0.7rem;
+    box-shadow: 2px 2px 5px black;
+    text-shadow: 1px 1px 5px black;
+}
+
+main img{
+    width: 50%;
+    filter: drop-shadow(5px 5px 3px);
+
+}
+
+/* estilos de section */
+
+section{
+    display: none;
+}
+
+/* estilos de footer*/
+
+footer h4{
+    text-align: center;
+
+}
+
+/* Media Queries */
+
+@media screen and (min-width:800px){
+
+    .contenedor{
+        display: grid;
+        height: 100vh;
+    }
+    header{
+        display: block;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    header nav ul{
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+    }
+
+    /* Animaciones de los botones del menu */
+
+    header nav ul li{
+        transition: 0.5s;
+    }
+    header nav ul li:hover{
+        background-color:  rgb(153, 89, 238);
+        font-weight: bold;
+        transform: scale(0.9);
+        transform: rotate(-10deg);
+        transition: 3s;
+        text-shadow: 1px 1px 2px black;
+    }
+
+
+    main{
+        
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        grid-template-rows: 0.5fr 1fr 0.5fr 0.5fr;
+        grid-template-areas: 
+            "p img"
+            "h2 img"
+            "p-dos img"
+            "boton img";
+        justify-items: center;
+        justify-content: center;
+    }
+
+    main p{
+        grid-area: p;
+    }
+    
+    main h2{
+        grid-area: h2;
+    }
+
+    main .p-dos{
+        grid-area: p-dos;
+    }
+
+    main .boton{
+        grid-area: boton;
+    }
+
+    /* estilos o animaciones del boton */
+    main .boton:hover{
+        box-shadow: 1px 1px 2px black;
+    }
+
+    main img{
+        grid-area: img;
+        
+    }
+
+    main .boton:hover{
+        box-shadow: 2px 2px 3px royalblue;
+    }
+
+    /*estilos de sention */
+
+    section{
+        display: block;
+        display: flex;
+        background-color: rgb(153, 89, 238);
+    }
+
+    section div{
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+
+        /* Animaciones de IMG de section*/
+    section div img{
+        width: 20%;
+        filter: drop-shadow(5px 5px 3px);
+        animation-name: bailecito;
+        animation-iteration-count: infinite;
+        animation-duration: 2s;
+        animation-direction: alternate-reverse;
+        
+    }
+
+    @keyframes bailecito{
+        to{
+            transform: scale(1.1);
+        }
+
+        font{
+            transform: scale(1.2);
+        }
+    }
+        
+    }
+
+    
+
+
+    section div p{
+        text-align: center;
+    }
+
+    /*estilos de footer*/
+
+    footer{
+        display: none;
+    }
+
+
